@@ -1,0 +1,29 @@
+<application desc="" id="scrapperservice" name="" smscode="">
+   <app-config>
+      <config-param name="APP_SMS_HEADER" value="null"/>
+   </app-config>
+   <services>
+      <service cachable="false" cacheduration="" id="getAboutUsDetails" smscode="" smsenabled="false" type="javaConnector">
+         <service-config>
+            <config-param name="className" value="com.kony.scrapper.gc.ScrapperJavaService"/>
+            <config-param name="methodName" value="getGenericScrapperData"/>
+            <config-param name="preprocessorname" value=""/>
+            <config-param name="postprocessorname" value=""/>
+            <config-param name="sockettimeout" value=""/>
+         </service-config>
+         <service-input/>
+         <service-output>
+            <param datatype="string" format="None" formatvalue="" name="getAboutUsDetails_url" sms-name="" src="" target="response"/>
+            <param datatype="string" format="None" formatvalue="" name="httpStatusCode" sms-name="" src="" target="response"/>
+            <param datatype="string" format="None" formatvalue="" name="getAboutUsDetails_cookie" sms-name="" src="" target="response"/>
+            <param datatype="string" format="None" formatvalue="" name="opstatus" sms-name="" src="" target="response"/>
+            <dataset id="aboutUs">
+               <param datatype="string" format="None" formatvalue="" name="content" sms-name="" src="" target=""/>
+               <param datatype="string" format="None" formatvalue="" name="img" sms-name="" src="" target=""/>
+               <param datatype="string" format="None" formatvalue="" name="header" sms-name="" src="" target=""/>
+            </dataset>
+            <param datatype="string" format="None" formatvalue="" name="errmsg" sms-name="" src="" target=""/>
+         </service-output>
+      </service>
+   </services>
+</application>
